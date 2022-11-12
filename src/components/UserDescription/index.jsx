@@ -1,4 +1,4 @@
-import { Grid, Paper, Stack, Typography } from "@mui/material";
+import { Grid,  Stack, Typography } from "@mui/material";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -21,23 +21,23 @@ const UserDescription = ({ userState }) => {
     <>
       <Stack>
         <Typography sx={{ color: "white" }}>
-          {bio !== null ? bio : "No Bio found"}
+          {bio !== null ? bio : "No Bio found on this profile."}
         </Typography>
 
-        <Paper elevation={3}>
-          <Stack spacing={2}>
-            <Typography sx={{ color: "white" }}>Repos</Typography>
-            <Typography sx={{ color: "white" }}>{public_repos}</Typography>
+        <Stack direction="row">
+          <Stack spacing={2} color={'primary'}>
+            <Typography sx={{ color: "black", textAlign: 'center' }} m={2} variant="h3">Repos</Typography>
+            <Typography sx={{ color: "black", textAlign: 'center' }} m={2} variant="h3">{public_repos}</Typography>
           </Stack>
-          <Stack spacing={2}>
-            <Typography sx={{ color: "white" }}>Followers</Typography>
-            <Typography sx={{ color: "white" }}>{followers}</Typography>
+          <Stack spacing={2} sx={{ backgroundColor: '#272845'}}>
+            <Typography sx={{ color: "black", textAlign: 'center' }} m={2} variant="h3">Followers</Typography>
+            <Typography sx={{ color: "black", textAlign: 'center' }} m={2} variant="h3">{followers}</Typography>
           </Stack>
-          <Stack spacing={2}>
-            <Typography sx={{ color: "white" }}>Following</Typography>
-            <Typography sx={{ color: "white" }}>{following}</Typography>
+          <Stack spacing={2} sx={{ backgroundColor: '#272845'}}>
+            <Typography sx={{ color: "black", textAlign: 'center' }} m={2} variant="h3">Following</Typography>
+            <Typography sx={{ color: "black", textAlign: 'center' }} m={2} variant="h3">{following}</Typography>
           </Stack>
-        </Paper>
+        </Stack>
 
         <Grid container>
           <Grid item xs={6}>

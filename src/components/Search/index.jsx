@@ -22,18 +22,29 @@ const Search = (props) => {
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
-        width: "80%",
+        width: "100%",
+        marginBottom:'20px',
       }}
     >
       <TextField
         label="Search Github User"
         variant="outlined"
+        success
         placeholder="@username"
         value={inputValue}
         onChange={onSearchChange}
-        sx={{ width: "90%", border: "1px solid white", borderRadius: "6px" }}
+        sx={{
+          color:'#535B91',
+          width: "100%",
+          border: "1px solid #535B91",
+          borderRadius: "6px",
+        }}
       ></TextField>
-      <IconButton sx={{ left: "-50px", color:'white' }} size="small" onClick={handleSubmit}>
+      <IconButton
+        sx={{ left: "-50px", color: "#535B91" }}
+        size="small"
+        onClick={handleSubmit}
+      >
         <SearchIcon />
       </IconButton>
     </Stack>
