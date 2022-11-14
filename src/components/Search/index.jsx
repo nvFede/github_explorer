@@ -13,6 +13,10 @@ const Search = (props) => {
     console.log(inputUser);
   };
   const onSearchChange = (e) => {
+    console.log(inputValue);
+    if(e.target.value) {
+
+    }
     const inputVal = e.target.value;
     setInputValue(inputVal);
   };
@@ -23,25 +27,26 @@ const Search = (props) => {
         flexDirection: "row",
         justifyContent: "center",
         width: "100%",
-        marginBottom:'20px',
+        paddingLeft: '10px',
       }}
     >
       <TextField
         label="Search Github User"
         variant="outlined"
         success
-        placeholder="@username"
+        placeholder="username"
         value={inputValue}
         onChange={onSearchChange}
+        
         sx={{
           color:'#535B91',
           width: "100%",
-          border: "1px solid #535B91",
           borderRadius: "6px",
+          marginLeft: '10px'
         }}
       ></TextField>
       <IconButton
-        sx={{ left: "-50px", color: "#535B91" }}
+        sx={{ left: "-50px", color: 'primary.main' }}
         size="small"
         onClick={handleSubmit}
       >

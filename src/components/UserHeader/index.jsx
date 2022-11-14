@@ -7,10 +7,14 @@ const UserInfo = (props) => {
 
   return (
     <>
-      <Stack>
-        <Typography variant="h2"   sx={{color:'white'}}>{name}</Typography>
-        <Typography variant="h4" sx={{color:'white'}}>@{login}</Typography>
-        <Typography sx={{color:'white'}}>{created_at}</Typography>
+      <Stack width="100%">
+        <Typography variant="h2" sx={{ color: "text.primary" }}>
+          {name}
+        </Typography>
+
+        <Typography variant="h4" sx={{ color: "text.primary" }}>
+          @{login}
+        </Typography>
       </Stack>
     </>
   );

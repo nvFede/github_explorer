@@ -52,28 +52,31 @@ function App() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            padding: "2rem",
+            padding: "3rem",
+            backgroundColor: "primary.main",
           }}
         >
           <Stack
             direction="row"
             sx={{
               width: "100%",
-              backgroundColor: "blue",
               borderRadius: "10px",
-              padding: "5px",
-              marginBottom: '10px'
+              marginBottom: "10px",
+              backgroundColor: "secondary.main",
+              padding: "10px 0",
             }}
           >
-            
-              <GitHubIcon  sx={{ color: "white",fontSize: '50px' }} />
-            
-            <Search inputUser={inputUser} setInputUser={setInputUser} />
-            <Button color="primary" variant="contained" onClick={changeTheme}>
+            <GitHubIcon sx={{ color: "text.primary", fontSize: "50px", marginLeft: '10px' }} />
+            <Search inputUser={inputUser} setInputUser={setInputUser}  />
+            <Button
+              sx={{ backgroundColor: "primary.main", marginRight: "10px" }}
+              variant="contained"
+              onClick={changeTheme}
+            >
               {!darkMode ? (
-                <WbIncandescentIcon />
+                <WbIncandescentIcon sx={{ color: "text.primary" }} />
               ) : (
-                <WbIncandescentOutlinedIcon />
+                <WbIncandescentOutlinedIcon sx={{ color: "text.primary" }} />
               )}
             </Button>
           </Stack>

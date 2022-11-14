@@ -5,10 +5,18 @@ import UserHeader from "../UserHeader";
 
 const UserCard = ({ userState }) => {
   return (
-    <Grid container sx={{ padding: " 10px", backgroundColor:'#202545' }}>
+    <Grid
+      container
+      sx={{
+        padding: "20px",
+        backgroundColor: "secondary.main",
+        height: "100%",
+        borderRadius: '10px'
+      }}
+    >
       <Grid item xs={3}>
         <CardMedia
-          sx={{ borderRadius: "50%"}}
+          sx={{ borderRadius: "50%" }}
           component="img"
           alt="github user"
           image={userState.avatar_url}
