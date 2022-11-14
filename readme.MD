@@ -1,12 +1,18 @@
+
 # Github User Explorer
 
 Simple site to explore github users 
 
 
 
-## Tech Stack
+### Live website deployed on Netlify
 
-**Client:** React, Material UI
+[Live Website Demo](https://63725d315492e0005759e2f6--nvfede-github-explorer.netlify.app)
 
 
 
+Made with:
+
+- React
+- Material UI 
+- Vite
